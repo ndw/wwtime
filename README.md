@@ -48,3 +48,21 @@ set these with the Emacs customization feature. Wwtime is in the
 * `wwtime-default-function` is the function that calculates the default time
 * `wwtime-time-zone-aliases` maps long time zone names to one-word names
 
+### Customization example
+
+Here's the relevant section of my `~/.emacs` file, for example:
+
+   (autoload 'wwtime "wwtime" nil t)
+   (autoload 'wwtime-convert "wwtime" nil t)
+
+   (setq wwtime-time-zones (append wwtime-time-zones '(("India" +5.5 "India"))))
+   ;(setq wwtime-display '("EST" "PST" "GMT" "CET" "JST" "India"))
+   ;(setq wwtime-display '("EDT" "PDT" "GMT" "BST" "CEST" "JST" "India"))
+   (setq wwtime-display '("EDT" "PDT" "GMT"))
+   ;(setq wwtime-display '("EST" "PST" "GMT"))
+   (setq wwtime-ampm '("EST" "CST" "MST" "PST" "AKST"
+                       "EDT" "CDT" "MDT" "PDT" "AKDT"
+                       "India"))
+
+I uncomment the relevant `wwwtime-display` settings depending on the season
+of the year and the number of timezones involved in my telcons.
