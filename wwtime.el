@@ -459,4 +459,4 @@ alternate time zone"
 
 (provide 'wwtime)
 
-;; wwtime.el ends here
+;;; wwtime.el ends here
